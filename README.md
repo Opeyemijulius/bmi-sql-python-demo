@@ -1,6 +1,6 @@
 # 🩺 BMI Records Manager – SQL + Python Mini Project
 
-This project simulates a simple health tech scenario where patient BMI (Body Mass Index) records are calculated, stored, and queried using **Python**, **SQLite (SQL)**, and **Pandas** — all run inside a **Google Colab notebook**.
+This project simulates a simple health tech scenario where mock patient BMI (Body Mass Index) records are calculated, stored, and queried using **Python**, **SQLite (SQL)**, and **Pandas** — all run inside a **Google Colab notebook**.
 
 ## 🚀 Project Overview
 
