@@ -95,19 +95,6 @@ cursor.execute(
 )
 conn.commit()
 
-# Delete Destiny Ijeoma
-first_name_delete = "Destiny"
-last_name_delete = "Ijeoma"
-
-cursor.execute(
-    """
-    DELETE FROM bmi_records
-    WHERE firstName = ? AND lastName = ?
-    """,
-    (first_name_delete, last_name_delete)
-)
-conn.commit()
-
 # Verify by reading the table
 df = pd.read_sql_query("SELECT * FROM bmi_records", conn)
 print(df)
