@@ -79,23 +79,18 @@ for firstName, lastName, weight_kg, height_m in patients:
 df = pd.read_sql_query("SELECT * FROM bmi_records", conn)
 print(df)
 
-# Insert Destiny Julius
-first_name_insert = "Destiny"
-last_name_insert = "Julius"
-weight_kg = 55.8
-height_m = 1.64
-bmi = weight_kg / (height_m ** 2)
+# Delete duplicate Olivia Grayson, keeping the one with the lowest id
+cursor.execute("""
+    DELETE FROM bmi_records
+    WHERE id NOT IN (
+        SELECT MIN(id) FROM bmi_records
+        GROUP BY firstName, lastName
+    )
+    AND (firstName = 'Olivia' AND lastName = 'Grayson')
+""")
 
-cursor.execute(
-    """
-    INSERT INTO bmi_records (firstName, lastName, weight_kg, height_m, bmi)
-    VALUES (?, ?, ?, ?, ?)
-    """,
-    (first_name_insert, last_name_insert, weight_kg, height_m, bmi)
-)
 conn.commit()
 
-# Verify by reading the table
 df = pd.read_sql_query("SELECT * FROM bmi_records", conn)
 print(df)
 
@@ -117,11 +112,3 @@ def categorize_bmi(bmi):
         return "Overweight"
     else:
         return "Obese"
-
-# The 11th patient to be added to the database
-
-w = 55.7919 # my weight
-h = 1.64 # my height
-destiny_bmi = calculate_bmi (w, h)
-destiny_category = categorize_bmi(destiny_bmi)
-print_bmi_report("Destiny", "Julius", destiny_bmi, destiny_category)
