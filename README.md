@@ -1,2 +1,37 @@
-# bmi-sql-python-demo
-A mini project demonstrating use of SQL and Python (with SQLite and Pandas) to create, query, and update a BMI records database.
+# 🩺 BMI Records Manager – SQL + Python Mini Project
+
+This project simulates a simple health tech scenario where patient BMI (Body Mass Index) records are calculated, stored, and queried using **Python**, **SQLite (SQL)**, and **Pandas** — all run inside a **Google Colab notebook**.
+
+## 🚀 Project Overview
+
+I created this project to strengthen my skills in:
+
+- Writing SQL commands inside Python
+- Using in-memory SQLite databases
+- Performing basic data operations (INSERT, SELECT)
+- Calculating BMI using real-world logic
+- Simulating database-driven healthcare scenarios
+
+It's part of my preparation for software and data-focused co-op/internship opportunities, including the [Philips Software Engineering Co-op](https://www.careers.philips.com/global/en).
+
+---
+
+## 🧠 What You’ll Learn
+
+- How to create and interact with a SQL database using Python
+- How to insert patient records and calculate BMI using formulas
+- How to retrieve, update, and display structured health data
+- How to use `pandas` to visualize SQL results
+
+---
+
+## 🛠 Technologies Used
+
+- Python 3
+- SQLite (via `sqlite3` library)
+- Pandas
+- Google Colab
+
+---
+
+
