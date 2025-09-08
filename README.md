@@ -12,8 +12,6 @@ I created this project to strengthen my skills in:
 - Calculating BMI using real-world logic
 - Simulating database-driven healthcare scenarios
 
-It's part of my preparation for software and data-focused co-op/internship opportunities, including the [Philips Software Engineering Co-op](https://www.careers.philips.com/global/en).
-
 ---
 
 ## 🧠 What You’ll Learn
