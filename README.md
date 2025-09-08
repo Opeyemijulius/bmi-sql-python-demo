@@ -25,21 +25,21 @@ It's part of my preparation for software and data-focused co-op/internship oppor
 
 ---
 
-## 🛠 Technologies Used
+## 🛠 Technologies Used and Future Improvements
 
 - Python 3
 - SQLite (via `sqlite3` library)
 - Pandas
 - Google Colab
 
+1. Connect to a persistent SQLite file or cloud-based database
+
+2. Add CRUD functions (Create, Read, Update, Delete)
+
+3. Build a basic Streamlit web app interface
+
+4. Add categorization (Underweight, Normal, Overweight, Obese)
+
 ---
-##💡 Future Improvements
 
-Connect to a persistent SQLite file or cloud-based database
-
-Add CRUD functions (Create, Read, Update, Delete)
-
-Build a basic Streamlit web app interface
-
-Add categorization (Underweight, Normal, Overweight, Obese)
 
