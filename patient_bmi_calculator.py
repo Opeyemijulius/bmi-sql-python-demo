@@ -79,22 +79,36 @@ for firstName, lastName, weight_kg, height_m in patients:
 df = pd.read_sql_query("SELECT * FROM bmi_records", conn)
 print(df)
 
-# Patient info
-first_name = "Destiny"
-last_name = "Ijeoma"
+# Insert Destiny Julius
+first_name_insert = "Destiny"
+last_name_insert = "Julius"
 weight_kg = 55.8
 height_m = 1.64
 bmi = weight_kg / (height_m ** 2)
 
-# Insert into table
 cursor.execute(
     """
     INSERT INTO bmi_records (firstName, lastName, weight_kg, height_m, bmi)
     VALUES (?, ?, ?, ?, ?)
     """,
-    (first_name, last_name, weight_kg, height_m, bmi)
+    (first_name_insert, last_name_insert, weight_kg, height_m, bmi)
 )
 conn.commit()
+
+# Delete Destiny Ijeoma
+first_name_delete = "Destiny"
+last_name_delete = "Ijeoma"
+
+cursor.execute(
+    """
+    DELETE FROM bmi_records
+    WHERE firstName = ? AND lastName = ?
+    """,
+    (first_name_delete, last_name_delete)
+)
+conn.commit()
+
+# Verify by reading the table
 df = pd.read_sql_query("SELECT * FROM bmi_records", conn)
 print(df)
 
