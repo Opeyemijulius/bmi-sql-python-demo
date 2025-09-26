@@ -14,15 +14,6 @@ I created this project to strengthen my skills in:
 
 ---
 
-## 🧠 What You’ll Learn
-
-- How to create and interact with a SQL database using Python
-- How to insert patient records and calculate BMI using formulas
-- How to retrieve, update, and display structured health data
-- How to use `pandas` to visualize SQL results
-
----
-
 ## 🛠 Technologies Used and Future Improvements
 
 - Python 3
